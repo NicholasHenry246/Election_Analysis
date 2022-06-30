@@ -109,9 +109,9 @@ with open("election_results.txt", "w") as txt_file:
         txt_file.write((f"{county_name}:{county_vote_percentage:.1f}%({cvotes:,})\n"))
 
          # 6f: Write an if statement to determine the winning county and get its vote count.
-        if (cvotes > winning_count) and (county_vote_percentage > winning_percentage):
+        if (cvotes > county_voter_turnout):
                 largest_county = county_name
-                winning_percentage = county_vote_percentage
+                county_voter_turnout = cvotes
                 #winning_county = county_name
 
     #7: Print the county with the largest turnout to the terminal.
@@ -150,7 +150,7 @@ with open("election_results.txt", "w") as txt_file:
     # Print the winning candidate (to terminal)
     winning_candidate_summary = (
         f"-------------------------\n"
-        f"Winner: {candidate_name}\n"
+        f"Winner: {winning_candidate}\n"
         f"Winning Vote Count: {winning_count:,}\n"
         f"Winning Percentage: {winning_percentage:.1f}%\n"
         f"-------------------------\n")
