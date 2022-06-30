@@ -114,14 +114,6 @@ with open("election_results.txt", "w") as txt_file:
                 winning_percentage = county_vote_percentage
                 #winning_county = county_name
 
-       # winning_county = (
-         #f"-------------------------\n"
-         #f"Winner County: {Largest_county_vote}\n"
-         #f"Winning Vote Count: {winning_count:,}\n"
-         #f"Winning Percentage: {winning_percentage:.1f}%\n"
-         #f"-------------------------\n")
-        #print(winning_county, end="")
-
     #7: Print the county with the largest turnout to the terminal.
     #largest_county = winning_county
     print("Largest county turnout:", largest_county)
